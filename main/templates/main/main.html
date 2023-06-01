@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block intro %}
+<div style="position: relative;z-index: 1;top: 40%"><h1 class="text-light ms-5">Помощник в LoL</h1></div>
+{% endblock %}
+
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+<script>
+VANTA.TOPOLOGY({
+  el: "#pass",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xd000ff,
+  backgroundColor: 0x22042e
+})
+</script>
+
+{% endblock %}

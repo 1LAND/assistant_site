@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %}</title>
+    {% block contentHead %}{% endblock %}
+</head>
+<body style='background-color:#22042e'>
+<style>
+    ::-webkit-scrollbar{
+       width:0px;
+       height:0px;
+    }
+    img {
+      	filter: brightness(80%)
+    }
+    a {
+        text-decoration: none
+    }
+    .text{
+        max-height:150px
+    }
+</style>
+<div id='intro' {% if not not_need_intro %} style='position: relative;height:700px'{% endif %} >
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+                <div class="container-fluid" >
+                    <a class="navbar-brand mb-0 h1" style="color:#d000ff" href="{% url 'home'%}">LAND</a>
+                    <div class="navbar-collapse collapse show" id="navbarColor01"></div>
+                </div>
+        </nav> 
+    </div>
+    {% block intro %}{% endblock %}
+</div>      
+
+{% block content %}{% endblock %}
+
+<div style="height:100px; padding:50px;padding-bottom:0px" class="fixed-bottom; border-top" width="100%">
+    <h6 class="text-light">Сделал Иван Ландарев ученик 11 "А" класс МБОУ "СОШ №79"</h6>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
