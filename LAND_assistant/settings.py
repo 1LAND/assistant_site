@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!zurg!2lel^oz!m-9^shg(r3w&rm91pj3f^nqrz)y$hqm^i-9p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['landassistant.pythonanywhere.com',]
 
 
 # Application definition
